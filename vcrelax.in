@@ -1,0 +1,62 @@
+&CONTROL
+  calculation = 'vc-relax'
+  etot_conv_thr =   1.0000000000d-05
+  forc_conv_thr =   1.0000000000d-04
+  outdir = './'
+  prefix = 'CsV3Sb5'
+  restart_mode = 'from_scratch'
+  pseudo_dir = './'
+  tprnfor = .true.
+  tstress = .true.
+  nstep = 100
+  verbosity = 'high'
+/
+&SYSTEM
+   ntyp             = 3
+   nat              = 9
+   ibrav            = 0
+   degauss =   0.02
+   ecutrho =   360
+   ecutwfc =   45
+   nosym = .false.
+   occupations = 'smearing'
+   smearing   = 'gaussian'
+/
+&ELECTRONS
+   conv_thr =   1.0000000000d-11
+   electron_maxstep = 200
+   mixing_beta =   6.0000000000d-01
+/
+&IONS
+   ion_dynamics = 'bfgs'
+/
+&CELL
+   cell_dynamics = 'bfgs'
+   press = 150.0
+   press_conv_thr = 0.5 
+   cell_dofree   = 'all'
+/
+
+ATOMIC_SPECIES
+Cs 132.90545196 Cs.upf
+V  50.9415 V.upf
+Sb 121.76 Sb.upf
+
+K_POINTS automatic
+9 9 6 0 0 0
+
+CELL_PARAMETERS (angstrom)
+   5.504517191  -0.000008181   0.000000000
+  -2.752265680   4.767049164   0.000000000
+   0.000000000   0.000000000   9.866403134
+
+ATOMIC_POSITIONS (angstrom)
+Cs            0.0000000000        0.0000000000        0.0000000000
+V             1.3761257552        2.3835204915        4.9332015669
+V             2.7522585954       -0.0000040905        4.9332015669
+V            -1.3761328402        2.3835245820        4.9332015669
+Sb            0.0000000000        0.0000000000        4.9332015669
+Sb            2.7522529075        1.5890128543        7.2036370340
+Sb           -0.0000013971        3.1780281286        2.6627660998
+Sb           -0.0000013971        3.1780281286        7.2036370340
+Sb            2.7522529075        1.5890128543        2.6627660998

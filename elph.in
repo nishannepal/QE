@@ -1,0 +1,18 @@
+phononcalculation.
+&inputph
+  tr2_ph = 1e-16
+  prefix='kagome'
+  fildvscf='kgdv'
+  amass(1)= 132.90545196
+  amass(2) = 50.9415
+  amass(3) = 121.76
+  outdir='./'
+  fildyn='kg.dyn'
+  electron_phonon='interpolated'
+  el_ph_sigma=0.005
+  el_ph_nsigma=10
+  trans=.true.
+  ldisp=.true.
+  reduce_io = .true.
+  nq1=2, nq2=2, nq3=2
+/

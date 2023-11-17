@@ -1,0 +1,6 @@
+&input
+  zasr = 'simple'
+  fildyn='kg.dyn' 
+  flfrc='kg222.fc'
+  la2F=.true.
+/

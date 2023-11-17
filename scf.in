@@ -1,0 +1,52 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.0000000000d-05
+  forc_conv_thr =   1.0000000000d-04
+  outdir = './'
+  prefix = 'kagome'
+  restart_mode = 'from_scratch'
+  pseudo_dir = './'
+  tprnfor = .true.
+  tstress = .true.
+  nstep = 100
+  verbosity = 'high'
+/
+&SYSTEM
+   ntyp             = 3
+   nat              = 9
+   ibrav            = 4
+   A =  5.31078
+   C =  7.87106
+   degauss =   0.02
+   ecutrho =   360
+   ecutwfc =   45
+   nosym = .false.
+   occupations = 'smearing'
+   smearing   = 'gaussian'
+   
+/
+&ELECTRONS
+   conv_thr =   1.0000000000d-14
+   electron_maxstep = 200
+   mixing_beta =   7.0000000000d-01
+/
+
+ATOMIC_SPECIES
+Cs 132.90545196 Cs.upf
+V  50.9415 V.upf
+Sb 121.76 Sb.upf
+
+K_POINTS automatic
+8 8 8 0 0 0
+
+ATOMIC_POSITIONS (angstrom)
+Cs            0.0000000000        0.0000000000        0.0000000000
+V             1.3276944976        2.2996343952        3.9355293614
+V             2.6553889220        0.0000000424        3.9355293614
+V            -1.3276944243        2.2996343529        3.9355293614
+Sb            0.0000000000        0.0000000000        3.9355293614
+Sb            2.6553893413        1.5330893970        6.1377323046
+Sb           -0.0000003460        3.0661793934        1.7333264182
+Sb           -0.0000003460        3.0661793934        6.1377323046
+Sb            2.6553893413        1.5330893970        1.7333264182
+
