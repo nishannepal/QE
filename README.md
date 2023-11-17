@@ -1,4 +1,4 @@
-In this repository, I have recreated work for pristine CsV3Sb5 under pressure of 15 GPa, where I have calculated bands and phonons. The corresponding plots are placed here as bands.pdf and GPa15.pdf. The purpose of these calculations is to learn DFT simulation using Quantum Espresso (QE). The steps are :
+In this repository, I have recreated work for pristine CsV3Sb5 under pressure of 15 GPa, where I have calculated bands and phonons. The corresponding plots are placed here as bands.pdf and 15gpa.pdf. The purpose of these calculations is to learn DFT simulation using Quantum Espresso (QE). The steps are :
 1) first fully relax the structure using vc-relax calculations implemented in QE with pressure = 0 Kbar.
 2) perform a vc-relax calculation with optimized lattice parameters and atomic positions with the pressure that we are interested. ( 10 Kbar = 1 GPa ) ( press = 150 for 15 GPa)
 3) Perform SCF calculation with optimized parameters after pressure is implied. ( pw.x )
