@@ -1,0 +1,6 @@
+&BANDS
+  prefix = 'kagome'
+  outdir = './'
+  filband = 'kagome.bands.dat'
+/
+
